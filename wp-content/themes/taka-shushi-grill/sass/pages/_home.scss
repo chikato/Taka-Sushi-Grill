@@ -1,0 +1,16 @@
+.section {
+  background-color: $color_white;
+  z-index: 1;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  @include bg-size(cover !important);
+
+  .content {
+    text-align: center;
+  }
+
+  .sub-title {
+    color: $color_white;
+    text-transform: uppercase;
+  }
+}

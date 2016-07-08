@@ -70,6 +70,8 @@ function tsg_scripts() {
 
     // custom js
     $scripts = array(
+        '/js/lib/scrolloverflow.min.js',
+        '/js/lib/jquery.fullPage.min.js',
         '/js/app.js'
     );
     foreach ($scripts as $key => $url){
@@ -77,7 +79,8 @@ function tsg_scripts() {
     }
 
     $styles = array(
-        '/css/bootstrap.min.css'
+        '/css/bootstrap.min.css',
+        '/css/jquery.fullPage.css'
     );
     foreach ($styles as $key => $url){
         wp_enqueue_style( 'tsg-style-'.$key, $path .  $url, array());

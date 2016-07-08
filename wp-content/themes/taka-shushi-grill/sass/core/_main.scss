@@ -1,3 +1,19 @@
 body {
   font-family: $font_roboto;
 }
+
+h1 {
+  text-transform: uppercase;
+  font-family: $font_raleway;
+  color: $color_main;
+}
+
+.mask {
+  background: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
