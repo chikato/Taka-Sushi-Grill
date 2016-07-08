@@ -9,11 +9,33 @@ h1 {
 }
 
 .mask {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
   height: 100vh;
   display: table;
   table-layout: fixed;
   width: 100%;
   position: relative;
   z-index: 2;
+}
+
+.btn-main {
+  @include btn($color_main, $color_white);
+}
+
+.btn-black {
+  @include btn(#000, $color_white);
+}
+
+.table {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+
+  .table-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
 }

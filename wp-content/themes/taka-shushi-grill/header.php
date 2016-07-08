@@ -17,7 +17,7 @@
 
 <body <?php body_class(); ?> >
 <div id="wrapper">
-    <div class="page">
+    <div class="page" id="main">
         <header>
             <?php get_template_part("parts/part", "menu"); ?>
         </header>

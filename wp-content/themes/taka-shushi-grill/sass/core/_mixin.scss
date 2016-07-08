@@ -123,3 +123,15 @@
   animation: $value;
 }
 
+@mixin btn($bg, $txt) {
+  text-decoration: none;
+  background: $bg;
+  color: $txt;
+  border: none;
+  outline: none;
+
+  &:hover {
+    color: $txt;
+    opacity: 0.8;
+  }
+}

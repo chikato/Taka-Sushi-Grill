@@ -9,8 +9,43 @@
     text-align: center;
   }
 
+  .title {
+    font-size: 90px;
+  }
+
   .sub-title {
     color: $color_white;
     text-transform: uppercase;
+    margin-bottom: 30px;
+
+    >p {
+      display: inline-block;
+      margin: 0;
+    }
+
+    .line {
+      border-bottom: 1px solid $color_white;
+      width: 80px;
+      vertical-align: middle;
+    }
+
+    .text {
+      padding: 0 15px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media #{$mobile} {
+  .section {
+    .sub-title {
+      .line {
+        width: 64px;
+      }
+
+      .text {
+        font-size: $font_size_header;
+      }
+    }
   }
 }
