@@ -2,11 +2,11 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /taka/
+RewriteBase /Taka-Sushi-Grill/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /taka/index.php [L]
+RewriteRule . /Taka-Sushi-Grill/index.php [L]
 </IfModule>
 
 # END WordPress

@@ -1,0 +1,24 @@
+header{
+  z-index: 3;
+  width:100%;
+  position: absolute;
+  #logo-header .logo{
+    margin-left:100px;
+    img {
+      width:200px;
+      height:100px;
+    }
+  }
+  .menu{
+    display: flex;
+    list-style: none;
+
+    li {
+      margin: 20px 10px;
+      a {
+        color: $color_white !important;
+        font-size: $font_size_header;
+      }
+    }
+  }
+}

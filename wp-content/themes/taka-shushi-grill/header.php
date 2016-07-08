@@ -17,8 +17,8 @@
 
 <body <?php body_class(); ?> >
 <div id="wrapper">
-    <div class="page" id="main">
-        <header>
+    <div class="page">
+        <header class="row">
             <?php get_template_part("parts/part", "menu"); ?>
         </header>
         <div id="main" class="clearfix">
