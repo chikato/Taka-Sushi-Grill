@@ -10,7 +10,7 @@ header{
     }
   }
   .menu{
-    display: flex;
+    @include flex();
     list-style: none;
 
     li {
