@@ -15,21 +15,55 @@
       display: inline-block;
       margin: 0 25px;
     }
+
+    .table-cell {
+      width: 100%;
+    }
   }
 
   .footer-bottom {
     background: url('../img/footer.jpg') no-repeat center center;
     background-size: cover;
     text-align: center;
-    height: 600px;
 
     .footer-logo {
-      padding-top: 50px;
 
       >img {
         width: 180px;
       }
     }
 
+    .footer-mask {
+      background: rgba(0,0,0, 0.6);
+      height: 100%;
+      padding: 50px 0;
+    }
+
+    .footer-info {
+      padding-top: 50px;
+      color: $color_white;
+      border-bottom: 1px solid $color_main;
+      max-width: 640px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    .fa-map-marker:before {
+      color: $color_main;
+      font-size: 20px;
+    }
+
+    .location {
+      margin-bottom: 10px;
+    }
+
+    .telephone {
+      margin-bottom: 0;
+    }
+
+    .fa-facebook {
+      color: $color_white;
+      font-size: 30px;
+    }
   }
 }

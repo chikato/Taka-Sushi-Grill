@@ -23,7 +23,7 @@ h1 {
 }
 
 .btn-black {
-  @include btn(#000, $color_white);
+  @include btn($color_base, $color_white);
 }
 
 .table {
