@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html <?php language_attributes(); ?> class="ie8"> <![endif]-->
-<!--[if !IE]> <html <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 8]>
+<html <?php language_attributes(); ?> class="ie8"> <![endif]-->
+<!--[if !IE]>
+<html <?php language_attributes(); ?>> <![endif]-->
 
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta charset="<?php bloginfo( 'charset' ); ?>" />
-    <link rel="profile" href="http://gmgp.org/xfn/11" />
-    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-    <!--[if lt IE 9]><script src="<?php bloginfo('template_url') ?>/js/lib/respond.min.js" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="<?php bloginfo('charset'); ?>"/>
+    <link rel="profile" href="http://gmgp.org/xfn/11"/>
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
+    <!--[if lt IE 9]>
+    <script src="<?php bloginfo('template_url') ?>/js/lib/respond.min.js"/>
     </script><![endif]-->
-    <!--[if lt IE 9]><script src="<?php bloginfo('template_url') ?>/js/lib/html5shiv.js" />
+    <!--[if lt IE 9]>
+    <script src="<?php bloginfo('template_url') ?>/js/lib/html5shiv.js"/>
     </script><![endif]-->
     <?php wp_head(); ?>
 </head>
@@ -18,7 +23,7 @@
 <body <?php body_class(); ?> >
 <div id="wrapper">
     <div class="page">
-        <header class="row">
+        <header class="row items-group vertical-center align-row">
             <?php get_template_part("parts/part", "menu"); ?>
         </header>
         <div id="main" class="clearfix">
