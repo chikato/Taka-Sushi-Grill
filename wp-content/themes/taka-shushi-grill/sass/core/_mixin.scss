@@ -129,6 +129,7 @@
   color: $txt;
   border: none;
   outline: none;
+  @include transition(all 0.3s ease);
 
   &:hover {
     color: $txt;
