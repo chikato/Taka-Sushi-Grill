@@ -10,13 +10,22 @@ header{
   }
   .menu{
     @include flex();
+    margin-left:50px;
     list-style: none;
-
+    .current-menu-item a{
+      color: $color_main;
+      font-weight: 700;
+      font-size: $font_size_header;
+    }
     li {
-      margin: 20px 10px;
+      margin: 20px 15px;
       a {
-        color: $color_white !important;
+        color: $color_white;
         font-size: $font_size_header;
+      }
+      a:hover {
+        text-decoration: none;
+        border-bottom: solid $color_white 2px;
       }
     }
   }
