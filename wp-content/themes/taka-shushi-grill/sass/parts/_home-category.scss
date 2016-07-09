@@ -48,12 +48,14 @@
       }
 
       &:hover, &.active {
-        .arrow-hover {
-          opacity: 1;
-        }
-
         .text {
           color: $color_main;
+        }
+      }
+
+      &.active {
+        .arrow-hover {
+          opacity: 1;
         }
       }
     }
@@ -99,14 +101,14 @@
         cursor: pointer;
 
         .item-container {
-          height: 80px;
-          min-height: 80px;
+          height: 100px;
+          min-height: 100px;
           border: 1px solid #dddbdb;
           position: relative;
           @include border-radius(4px);
           @include flex;
           @include transition(all 0.3s ease);
-          align-items: center;
+          @include flex-align-items(center);
 
           &:hover {
             border: 1px solid $color_main;
@@ -121,12 +123,12 @@
 
             img {
               height: 100%;
-              border-radius: 4px 0 0 4px;
+              border-radius: 4px;
             }
           }
 
           .item-info {
-            margin-left: 10px;
+            margin-left: 15px;
             flex-grow: 1;
           }
 
@@ -144,6 +146,10 @@
             padding: 0 5px;
             @include transition(all 0.4s ease);
             opacity: 0;
+          }
+
+          .item-title, .price {
+            font-weight: bold;
           }
         }
       }

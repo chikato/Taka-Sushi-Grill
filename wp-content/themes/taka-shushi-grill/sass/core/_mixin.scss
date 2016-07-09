@@ -163,7 +163,7 @@
 @mixin flex-align-items($value) {
   -webkit-align-items: $value;
   -moz-align-items: $value;
-  -ms-align-items: $value;
+  -ms-flex-align: $value;
   -o-align-items: $value;
   align-items: $value;
 }

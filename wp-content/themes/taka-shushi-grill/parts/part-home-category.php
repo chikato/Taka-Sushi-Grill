@@ -50,15 +50,15 @@
                             <img class="img" src="<?php echo get_bloginfo('template_url').'/img/content/home/yaki.jpg'; ?>">
                         </div>
                         <div class="item-info">
-                            <div>
-                                <div>YAKI-TORI</div>
+                            <div class="item-wrapper">
+                                <div class="item-title">YAKI-TORI</div>
                                 <div>SpeisekarteSpeisekarte Speisekarte</div>
                             </div>
                         </div>
                         <div class="item-price">
                             <div>
                                 <div class="price-label">Preis</div>
-                                <div>3.50e</div>
+                                <div class="price">3.50e</div>
                             </div>
                         </div>
                         <span class="hover-text">NEU</span>
