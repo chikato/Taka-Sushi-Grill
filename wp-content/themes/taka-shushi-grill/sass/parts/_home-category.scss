@@ -5,17 +5,30 @@
   position: relative;
 
   .bg-img {
-    height: 570px;
+    height: 490px;
     position: relative;
+  }
+
+  h1, h2 {
+    margin: 0;
+  }
+
+  .mn-title {
+    color: $color_white;
+  }
+
+  .mn-sub-title {
+    color: $color_main;
   }
 
   .category {
     position: absolute;
     bottom: 0;
+    left: 0;
+    right: 0;
     color: $color_white;
 
     >div {
-      min-height: 60px;
       background: $color_overlay;
       position: relative;
       cursor: pointer;
@@ -34,7 +47,7 @@
         @include transition(all 0.3s ease);
       }
 
-      &:hover {
+      &:hover, &.active {
         .arrow-hover {
           opacity: 1;
         }
@@ -46,16 +59,18 @@
     }
 
     .food, .drink {
+      padding: 5px 10px;
+
       >div {
         display: inline-block;
         vertical-align: middle;
       }
     }
 
-    .menu-icon {
-      width: 48px;
-      height: 48px;
-      background: $color_white;
+    .menu-icon >img{
+      width: auto;
+      height: 52px;
+      margin-right: 10px;
     }
 
     >div:first-child {
@@ -99,6 +114,7 @@
           @include border-radius(4px);
           @include flex;
           @include transition(all 0.3s ease);
+          align-items: center;
 
           &:hover {
             border: 1px solid $color_main;

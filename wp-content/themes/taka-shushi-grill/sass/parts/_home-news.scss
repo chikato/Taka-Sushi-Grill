@@ -25,10 +25,6 @@
   .event-content {
     $eventHeight: 240px;
 
-    >div:first-child {
-      padding: 0;
-    }
-
     .event-img {
       width: 100%;
       height: $eventHeight;
