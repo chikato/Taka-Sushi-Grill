@@ -98,14 +98,6 @@
         padding: 0;
         cursor: pointer;
 
-        &:nth-child(2n + 1) {
-          padding-right: 7px;
-        }
-
-        &:nth-child(2n) {
-          padding-left: 7px;
-        }
-
         .item-container {
           height: 80px;
           min-height: 80px;
@@ -154,6 +146,20 @@
             opacity: 0;
           }
         }
+      }
+    }
+  }
+}
+
+@media #{$desktop} {
+  .block-menu {
+    .items .item {
+      &:nth-child(2n + 1) {
+        padding-right: 7px;
+      }
+
+      &:nth-child(2n) {
+        padding-left: 7px;
       }
     }
   }

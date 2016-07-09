@@ -1,5 +1,5 @@
 <footer id="footer" class="footer">
-    <div class="newsletter table container">
+    <div class="newsletter table tk-container">
             <div class="table-cell">
                 <label>registrieren sie sich für den newsletter</label>
                 <input type="text" value="" class="form-control">
@@ -9,7 +9,9 @@
     <div class="footer-bottom">
         <div class="footer-mask">
             <div class="footer-logo">
-                <img class="logo" src="<?php echo get_bloginfo('template_url').'/img/common/logo.jpg'; ?>">
+                <a href="<?php echo esc_url( get_home_url() ) ?>">
+                    <img class="logo" src="<?php echo get_bloginfo('template_url').'/img/common/logo.jpg'; ?>">
+                </a>
             </div>
             <div class="footer-info container">
                 <div class="location"><i class="fa fa-map-marker"></i></div>

@@ -14,28 +14,30 @@
             <p class="event-time">am 01.09.2016 um 12:30 Uhr</p>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-2 event-date clearfix">
-            <div class="ed-col">
-                <div class="date-content">
-                    <p class="num day">06</p>
-                    <p class="des">Tage</p>
+            <div class="event-cover">
+                <div class="ed-col">
+                    <div class="date-content">
+                        <p class="num day">06</p>
+                        <p class="des">Tage</p>
+                    </div>
                 </div>
-            </div>
-            <div class="ed-col">
-                <div class="date-content">
-                    <p class="num hour">16</p>
-                    <p class="des">Studen</p>
+                <div class="ed-col">
+                    <div class="date-content">
+                        <p class="num hour">16</p>
+                        <p class="des">Studen</p>
+                    </div>
                 </div>
-            </div>
-            <div class="ed-col">
-                <div class="date-content">
-                    <p class="num minute">11</p>
-                    <p class="des">Minuten</p>
+                <div class="ed-col">
+                    <div class="date-content">
+                        <p class="num minute">11</p>
+                        <p class="des">Minuten</p>
+                    </div>
                 </div>
-            </div>
-            <div class="ed-col">
-                <div class="date-content">
-                    <p class="num second">58</p>
-                    <p class="des">Sekunden</p>
+                <div class="ed-col">
+                    <div class="date-content">
+                        <p class="num second">58</p>
+                        <p class="des">Sekunden</p>
+                    </div>
                 </div>
             </div>
         </div>
