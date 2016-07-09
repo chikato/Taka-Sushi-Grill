@@ -8,8 +8,20 @@ h1 {
   color: $color_main;
 }
 
+.img {
+  max-width: 100%;
+  display: block;
+}
+
+.bg-img {
+  background-color: $color_white;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  @include bg-size(cover !important);
+}
+
 .mask {
-  background: rgba(0, 0, 0, 0.6);
+  background: $color_overlay;
   height: 100vh;
   display: table;
   table-layout: fixed;

@@ -9,10 +9,11 @@
         },
         
         _initFP: function () {
-            $('#fullpage').fullpage({
+            $('#wrapper').fullpage({
                 verticalCentered: false,
                 css3: true,
-                scrollingSpeed: 1000,
+                scrollingSpeed: 800
+                ,
                 scrollOverflow: true,
                 scrollOverflowOptions: {
                     scrollbars: true,
