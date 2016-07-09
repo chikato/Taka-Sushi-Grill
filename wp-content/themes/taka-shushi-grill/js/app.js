@@ -12,8 +12,9 @@
             $('#wrapper').fullpage({
                 verticalCentered: false,
                 css3: true,
-                scrollingSpeed: 800
-                ,
+                scrollingSpeed: 800,
+                // scrollBar: true
+                // ,
                 scrollOverflow: true,
                 scrollOverflowOptions: {
                     scrollbars: true,

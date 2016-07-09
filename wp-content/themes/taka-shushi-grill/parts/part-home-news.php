@@ -1,7 +1,7 @@
 <div class="events clearfix">
     <div class="event-header col-md-12">
-        <h4>bevorstehende</h4>
-        <h3>VERANSTALTUNGEN</h3>
+        <h2>bevorstehende</h2>
+        <h1>VERANSTALTUNGEN</h1>
     </div>
     <div class="event-content container-fluid">
         <div class="col-md-5 col-md-offset-1">

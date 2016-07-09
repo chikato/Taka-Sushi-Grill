@@ -9,8 +9,10 @@
         <div class="category container-fluid">
             <div class="col-md-5 col-md-offset-1">
                 <div class="table">
-                    <div class="table-cell clearfix food">
-                        <div class="food-icon"></div>
+                    <div class="table-cell food">
+                        <div class="menu-icon food-icon">
+                            <img class="img" src="<?php echo get_bloginfo('template_url').'/img/content/home/noodles.png'; ?>">
+                        </div>
                         <div class="text food-text">
                             <h5 class="menu-title">ESSEN</h5>
                             <p class="food-text">Asiatische Küche</p>
@@ -21,8 +23,10 @@
             </div>
             <div class="col-md-5">
                 <div class="table">
-                    <div class="table-cell clearfix drink">
-                        <div class="drink-icon"></div>
+                    <div class="table-cell drink">
+                        <div class="menu-icon drink-icon">
+                            <img class="img" src="<?php echo get_bloginfo('template_url').'/img/content/home/wine.png'; ?>">
+                        </div>
                         <div class="text drink-text">
                             <h5 class="menu-title">TRINKEN</h5>
                             <p class="food-text">Erfrischungsgetränke & Tee</p>

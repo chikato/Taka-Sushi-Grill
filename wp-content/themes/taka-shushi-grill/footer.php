@@ -9,7 +9,7 @@
     <div class="footer-bottom">
         <div class="footer-mask">
             <div class="footer-logo">
-                <img src="<?php echo get_bloginfo('template_url').'/img/common/logo.jpg'; ?>">
+                <img class="logo" src="<?php echo get_bloginfo('template_url').'/img/common/logo.jpg'; ?>">
             </div>
             <div class="footer-info container">
                 <div class="location"><i class="fa fa-map-marker"></i></div>

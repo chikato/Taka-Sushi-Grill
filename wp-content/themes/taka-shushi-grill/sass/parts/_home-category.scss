@@ -19,6 +19,7 @@
       background: $color_overlay;
       position: relative;
       cursor: pointer;
+      padding: 0;
 
       .arrow-hover {
         width: 16px;
@@ -44,6 +45,19 @@
       }
     }
 
+    .food, .drink {
+      >div {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    .menu-icon {
+      width: 48px;
+      height: 48px;
+      background: $color_white;
+    }
+
     >div:first-child {
       border-right: 1px dotted $color_white;
     }
@@ -51,6 +65,10 @@
     .text {
       text-align: left;
       @include transition(all 0.3s ease);
+
+      >* {
+        margin: 0;
+      }
     }
   }
 
@@ -62,7 +80,7 @@
 
       .item {
         margin-top: 20px;
-        padding-left: 0;
+        padding: 0;
         cursor: pointer;
 
         &:nth-child(2n + 1) {

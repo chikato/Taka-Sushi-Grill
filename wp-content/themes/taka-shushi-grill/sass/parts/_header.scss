@@ -2,11 +2,9 @@ header{
   z-index: 3;
   width:100%;
   position: absolute;
+
   #logo-header .logo{
-    margin-left:100px;
-    img {
-      width:200px;
-    }
+    margin-left: 100px;
   }
   .menu{
     @include flex();
