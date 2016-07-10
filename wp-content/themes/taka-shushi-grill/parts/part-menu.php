@@ -9,7 +9,7 @@
         wp_nav_menu();
         ?>
     </div>
-    <div id="social" class="col-md-1 ">
+    <div id="social" class="col-md-1">
         <span><a href="#"><i class="fa fa-facebook"></i></a></span>
     </div>
 </div>
