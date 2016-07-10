@@ -1,46 +1,150 @@
-header{
-  z-index: 3;
-  width:100%;
+$background-mobile-nav : #373B3C;
+header {
+  width: 100%;
   position: absolute;
-  #nav-header{
-    margin-left: 170px;
-    div {
-      padding: 0;
-    }
-    #social {
-      border-left: solid 1px rgba(255,255,255,0.6);
-      padding: 7px 0;
-      span a {
-        margin-left: 25px;
+  .fa-facebook {
+    font-size: $font_size_header;
+    color: $color_white;
+  }
+  //reset padding
+  ul {
+     padding: 0;
+  }
+  .menu {
+    list-style: none;
+    margin: 0;
+    li > a {
         color: $color_white;
         font-size: $font_size_header;
-      }
     }
-    .menu{
-      padding: 0;
-      @include flex();
-      list-style: none;
-      margin: 0;
-      .current-menu-item a{
-        color: $color_main;
-        font-weight: 700;
-        font-size: $font_size_header;
-      }
-      li {
-        margin-right: 25px;
-        a {
-          color: $color_white;
-          font-size: $font_size_header;
-        }
-        a:hover {
-          text-decoration: none;
-          border-bottom: solid $color_white 2px;
-        }
-      }
-    }
-  }
-  #logo-header .logo{
-    margin-left: 100px;
   }
 
+  @media #{$desktop} {
+    #logo-header .logo {
+      margin-left: 100px;
+    }
+    z-index: 3;
+    .nav-header {
+      margin-left: 160px;
+      >div {
+        padding: 0;
+      }
+      #social {
+        border-left: solid 1px rgba(255, 255, 255, 0.6);
+        padding: 7px 0;
+        span a {
+          margin-left: 25px;
+        }
+      }
+      .menu {
+        padding: 0;
+        @include flex();
+        .current-menu-item a {
+          color: $color_main;
+          font-weight: 700;
+          font-size: $font_size_header;
+        }
+        li {
+          margin-right: 25px;
+
+          a:hover {
+            text-decoration: none;
+            border-bottom: solid $color_white 2px;
+          }
+        }
+      }
+    }
+  }
+
+
+  @media #{$mobile_and_tablet}{
+    height: 100%;
+    //left: 50%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    #active-input {
+      display: none !important;
+    }
+    //position: absolute;
+    .menu-button {
+      position: absolute;
+      margin: 15px;
+      @include flex-align-self( flex-start);
+      .fa-bars {
+        font-size: 30px;
+        color: $color_white;
+      }
+    }
+    .nav-header {
+      height:100%;
+      padding-left: 30px;
+      position: fixed;
+      width: 100%;
+      z-index: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      //left: -70% ;
+      .menu {
+        .current-menu-item a {
+          color: $color_main;
+          font-weight: 700;
+          font-size: $font_size_header;
+        }
+        li {
+          margin: 25px  0  0 10px ;
+
+        }
+      }
+      .fa-facebook {
+        font-size: 20px;
+      }
+      #social {
+        margin: 10px  0  0 10px;
+      }
+      @include flex-direction(column);
+      background-color: $background-mobile-nav;
+    }
+
+
+  }
 }
+
+.nav-trigger {
+  /* critical styles - hide the checkbox input */
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+@media #{$mobile_and_tablet}{
+
+  label[for="nav-trigger"] {
+    /* critical positioning styles */
+    position: fixed;
+    left: 15px; top: 15px;
+    z-index: 4;
+
+    /* non-critical apperance styles */
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect fill='white' width='30' height='6'/><rect y='24' width='30' fill='white' height='6'/><rect y='12' fill='white' width='30' height='6'/></svg>");
+    background-size: contain;
+  }
+
+
+  .nav-trigger + label, #main {
+    transition: left 0.2s;
+  }
+
+  .nav-trigger:checked + label {
+    left: 77% + 5;
+  }
+  .nav-trigger:checked ~ #main {
+    left: 77%;
+  }
+
+
+}
+

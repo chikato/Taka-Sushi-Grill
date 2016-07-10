@@ -167,3 +167,11 @@
   -o-align-items: $value;
   align-items: $value;
 }
+
+@mixin flex-align-self($value) {
+  -webkit-align-self: $value;
+  -moz-align-self: $value;
+  -ms-align-self: $value;
+  -o-align-self: $value;
+  align-self: $value;
+}
