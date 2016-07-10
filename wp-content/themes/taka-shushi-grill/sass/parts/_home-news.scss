@@ -25,10 +25,6 @@
   .event-content {
     $eventHeight: 240px;
 
-    >div:first-child {
-      padding: 0;
-    }
-
     .event-img {
       width: 100%;
       height: $eventHeight;
@@ -41,17 +37,17 @@
       text-align: center;
     }
 
-    .event-date {
+    .event-date .event-cover {
       height: $eventHeight;
       background: $color_main;
-      padding: 15px;
+      padding: 8px;
       flex-flow: row wrap;
       @include flex;
 
       >div {
         position: relative;
         width: 50%;
-        padding: 5px;
+        padding: 4px;
         @include box-sizing;
       }
 
@@ -78,5 +74,11 @@
     .h4 {
       color: $color_main;
     }
+  }
+}
+
+@media #{$desktop} {
+  .events .event-date {
+    padding: 0;
   }
 }

@@ -1,11 +1,20 @@
 body {
   font-family: $font_roboto;
 }
+#main {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: white; /* Needs a background or else the nav will show through */
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
 
+}
 h1 {
   text-transform: uppercase;
   font-family: $font_raleway;
-  color: $color_main;
 }
 
 .img {
@@ -52,6 +61,62 @@ h1 {
   }
 }
 
+.element-centre {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%, -50%));
+}
+
 .logo {
   width: 180px;
+}
+
+.tk-container {
+  padding: 0 7%;
+  @include clearfix;
+}
+
+.items-group {
+  @include flex();
+
+  &.align-row {
+    @include flex-direction(row);
+  }
+
+  &.align-column {
+    @include flex-direction(column);
+  }
+
+  &.align-start {
+    @include flex-justify-content(flex-start);
+  }
+
+  &.align-end {
+    @include flex-justify-content(flex-end);
+  }
+
+  &.align-center {
+    @include flex-justify-content(center);
+  }
+
+  &.flex-wrap {
+    @include flex-wrap(wrap);
+  }
+
+  &.flex-no-wrap {
+    @include flex-wrap(nowrap);
+  }
+
+  &.vertical-top {
+    @include flex-align-items( flex-start);
+  }
+
+  &.vertical-center {
+    @include flex-align-items( center);
+  }
+
+  &.vertical-bottom {
+    @include flex-align-items( flex-end);
+  }
 }

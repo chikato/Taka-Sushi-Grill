@@ -1,30 +1,205 @@
-header{
-  z-index: 3;
-  width:100%;
+$background-mobile-nav: #373B3C;
+header {
+  width: 100%;
   position: absolute;
-
-  #logo-header .logo{
-    margin-left: 100px;
+  .fa-facebook {
+    font-size: $font_size_header;
+    color: $color_white;
   }
-  .menu{
-    @include flex();
-    margin-left:50px;
+  //reset padding
+  ul {
+    padding: 0;
+  }
+  .menu {
     list-style: none;
-    .current-menu-item a{
-      color: $color_main;
-      font-weight: 700;
+    margin: 0;
+    li > a {
+      color: $color_white;
       font-size: $font_size_header;
     }
-    li {
-      margin: 20px 15px;
-      a {
-        color: $color_white;
-        font-size: $font_size_header;
+  }
+
+  @media #{$desktop} {
+    transition: all 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    #logo-header .logo {
+      transition: all 0.5s;
+    }
+    &.header-stick {
+      top: 0;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      max-height: 50px;
+      background-color: $background-mobile-nav;
+      position: fixed;
+      padding-top: 0;
+      padding-bottom: 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
+
+      #logo-header .logo {
+        width: 120px;
       }
-      a:hover {
-        text-decoration: none;
-        border-bottom: solid $color_white 2px;
+
+    }
+    #logo-header .logo {
+      margin-left: 100px;
+    }
+    z-index: 3;
+    .nav-header {
+      margin-left: 160px;
+      > div {
+        padding: 0;
+      }
+      #social {
+        border-left: solid 1px rgba(255, 255, 255, 0.6);
+        padding: 7px 0;
+        span a {
+          margin-left: 25px;
+        }
+      }
+      .menu {
+        padding: 0;
+        @include flex();
+        .current-menu-item a {
+          color: $color_main;
+          font-weight: 700;
+          font-size: $font_size_header;
+        }
+        li {
+          margin-right: 25px;
+          a:hover {
+            text-decoration: none;
+          }
+
+        }
+        li:not(.current-menu-item) {
+
+          a {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -moz-osx-font-smoothing: grayscale;
+            position: relative;
+            overflow: hidden;
+          }
+          a:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            right: 100%;
+            bottom: 0;
+            background: $color_white;
+            height: 2px;
+            -webkit-transition-property: right;
+            transition-property: right;
+            -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+          }
+          a:hover:before, a:focus:before, a:active:before {
+            right: 0;
+          }
+
+        }
       }
     }
   }
+
+  @media #{$mobile_and_tablet}{
+    height: 100%;
+    //left: 50%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    #active-input {
+      display: none !important;
+    }
+    //position: absolute;
+    .menu-button {
+      position: absolute;
+      margin: 15px;
+      @include flex-align-self(flex-start);
+      .fa-bars {
+        font-size: 30px;
+        color: $color_white;
+      }
+    }
+    .nav-header {
+      height: 100%;
+      padding-left: 30px;
+      position: fixed;
+      width: 100%;
+      z-index: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      //left: -70% ;
+      .menu {
+        .current-menu-item a {
+          color: $color_main;
+          font-weight: 700;
+          font-size: $font_size_header;
+        }
+        li {
+          margin: 25px 0 0 10px;
+
+        }
+      }
+      .fa-facebook {
+        font-size: 20px;
+      }
+      #social {
+        margin: 10px 0 0 10px;
+      }
+      @include flex-direction(column);
+      background-color: $background-mobile-nav;
+    }
+
+  }
 }
+
+.nav-trigger {
+  /* critical styles - hide the checkbox input */
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+@media #{$mobile_and_tablet}{
+
+  label[for="nav-trigger"] {
+    /* critical positioning styles */
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    z-index: 4;
+
+    /* non-critical apperance styles */
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect fill='white' width='30' height='6'/><rect y='24' width='30' fill='white' height='6'/><rect y='12' fill='white' width='30' height='6'/></svg>");
+    background-size: contain;
+  }
+
+  .nav-trigger + label, #main {
+    transition: left 0.2s;
+  }
+
+  .nav-trigger:checked + label {
+    left: 77% + 5;
+  }
+  .nav-trigger:checked ~ #main {
+    left: 77%;
+  }
+
+}
+

@@ -37,6 +37,7 @@ $screen-md-max:              ($screen-lg - 1) !default;
 /* Screen sizes
 * ========================================================================== */
 $mobile: "only screen and (max-width: #{$screen-xs-max})";
+$mobile_and_tablet : "only screen and (max-width: #{$screen-sm-max}) ";
 $tablet: "only screen and (min-width:#{$screen-tablet}) and (max-width:#{$screen-sm-max})";
 $desktop: "only screen and (min-width:#{$screen-desktop})";
 $desktop_small: "only screen and (min-width:#{$screen-desktop}) and (max-width:#{$screen-md-max})";
