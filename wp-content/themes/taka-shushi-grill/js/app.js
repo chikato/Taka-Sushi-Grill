@@ -9,6 +9,13 @@
         },
         
         _initFP: function () {
+            $(document).on("scroll",function(){
+                if($(document).scrollTop()>1){
+                    $("header").addClass("header-stick");
+                } else{
+                    $("header").removeClass("header-stick");
+                }
+            });
             // $('#wrapper').fullpage({
             //     verticalCentered: false,
             //     css3: true,
