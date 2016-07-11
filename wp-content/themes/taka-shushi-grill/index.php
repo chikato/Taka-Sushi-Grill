@@ -18,6 +18,6 @@
     <section class="section">
         <?php get_template_part("parts/part", "home-news"); ?>
         <?php get_template_part("parts/part", "home-category"); ?>
-        <?php get_footer(); ?>
     </section>
 </div>
+<?php get_footer(); ?>
