@@ -76,7 +76,18 @@
     }
 
     >div:first-child {
-      border-right: 1px dotted $color_white;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: url('../img/content/home/dot.png') no-repeat center center;
+        background-size: 100%;
+        width: 4px;
+      }
     }
 
     .text {
@@ -167,6 +178,14 @@
       &:nth-child(2n) {
         padding-left: 7px;
       }
+    }
+  }
+}
+
+@media #{$mobile_and_tablet} {
+  .block-menu {
+    .bg-img {
+      max-height: 50vh;
     }
   }
 }

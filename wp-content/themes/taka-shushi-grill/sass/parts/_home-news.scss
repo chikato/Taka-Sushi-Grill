@@ -82,3 +82,17 @@
     padding: 0;
   }
 }
+
+@media #{$mobile} {
+  .events {
+    .event-header {
+      >h2 {
+        font-size: 24px;
+      }
+
+      >h1 {
+        font-size: 26px;
+      }
+    }
+  }
+}
