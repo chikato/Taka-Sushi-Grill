@@ -27,5 +27,7 @@
             <?php get_template_part("parts/part", "menu"); ?>
         </header>
         <input type="checkbox" id="nav-trigger" class="visible-xs-block visible-sm-block nav-trigger">
-        <label for="nav-trigger" class="visible-xs-block visible-sm-block"></label>
+        <label for="nav-trigger" class="visible-xs-block visible-sm-block">
+            <a><i class="fa fa-bars"></i></a>
+        </label>
         <div id="main" class="clearfix">
