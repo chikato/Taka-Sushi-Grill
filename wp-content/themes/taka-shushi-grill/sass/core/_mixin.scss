@@ -125,7 +125,7 @@
 @mixin btn($bg, $txt) {
   text-decoration: none;
   background: $bg;
-  color: $txt;
+  color: $txt !important;
   border: none;
   outline: none;
   @include transition(all 0.3s ease);
@@ -133,6 +133,10 @@
   &:hover {
     color: $txt;
     opacity: 0.8;
+  }
+
+  &:hover, &:active, &:focus {
+    outline: none !important;
   }
 }
 

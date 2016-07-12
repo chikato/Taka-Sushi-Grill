@@ -1,0 +1,22 @@
+.contact-form-container {
+  margin: 30px;
+
+  .wpcf7 {
+    max-width: 520px;
+    margin: 0 auto;
+
+    h2 {
+      text-align: center;
+      color: $color_main;
+      margin-bottom: 20px;
+    }
+
+    form >p {
+      margin-bottom: 15px;
+    }
+
+    .wpcf7-response-output {
+      display: none !important;
+    }
+  }
+}
