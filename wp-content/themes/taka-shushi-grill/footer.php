@@ -1,3 +1,6 @@
+<?php
+    $options = get_option("eto_settings");
+?>
 <footer id="footer" class="footer">
     <div class="newsletter table tk-container">
             <div class="table-cell">
@@ -15,11 +18,11 @@
             </div>
             <div class="footer-info container">
                 <div class="location"><i class="fa fa-map-marker"></i></div>
-                <p class="address">Unterweiden 130,  47918 Tönisvorst,  Deutschland.</p>
-                <p class="telephone">Telefon:  0815 123456</p>
-                <p class="email">E-Mail:  taka-sushi-grill@web.de</p>
+                <p class="address"><?php echo $options['eto_address'];?></p>
+                <p class="telephone"><?php echo $options['eto_phone'];?></p>
+                <p class="email"><?php echo $options['eto_email'];?></p>
             </div>
-            <div class="footer-social"><a href="#"><i class="fa fa-facebook"></i></a></div>
+            <div class="footer-social"><a target="_blank" href="<?php echo $options['eto_facebook'];?>"><i class="fa fa-facebook"></i></a></div>
         </div>
     </div>
 </footer>

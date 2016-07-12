@@ -93,8 +93,7 @@ function tsg_scripts() {
 add_action( 'wp_enqueue_scripts', 'tsg_scripts' );
 
 function add_theme_option() {
-    $taka_options = get_option("eto_settings");
     global $taka_options;
-    echo $taka_options;
+    $taka_options = get_option("eto_settings");
 }
 add_action( 'wp_head', 'add_theme_option' );

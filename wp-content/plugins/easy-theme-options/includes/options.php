@@ -4,7 +4,7 @@
 * To retrieve a value use: $eto_options[$prefix.'var']
 ----------------------------------------- */
 
-$prefix = 'taka_';
+$prefix = 'eto_';
 
 /* ----------------------------------------
 * Create the TABS
