@@ -11,47 +11,64 @@ if( !class_exists('taka') ):
     
 class taka {
     function __construct() {
-        add_action('init', array($this, 'init'), 1);
-//        add_menu_page (
-//            'Site Settings',
-//            'Site Settings',
-//            'manage_options',
-//            'site_settings',
-//            'show_settings',
-//            '',
-//            '2'
-//        );
+        add_action('init', array($this, 'init'));
     }
 //
     function init() {
-//        if( is_admin() ) {
-//            add_action('admin_menu', 'admin_menu');
-//            add_action('admin_init', 'register_settings' );
-//            add_menu_page('My First Plugin Settings', 'MFPD Settings', 'administrator', __FILE__, 'show_settings',"", 1);
-//            add_action( 'admin_init', 'register_settings' );
-//        }
+        if(is_admin()) {
+            add_action('admin_menu', array($this, 'taka_admin_menu'));
+            add_action('admin_init', array($this, 'register_settings'));
+        }
     }
-//
-//    function admin_menu() {
-////        add_menu_page(__("Site Settings",'taka'), __("Site Settings",'taka'), 'manage_options', 'taka_settings', false, false, '2');
-//        add_menu_page (
-//            'Site Settings',
-//            'Site Settings',
-//            'manage_options',
-//            'site_settings',
-//            'show_settings',
-//            '',
-//            '2'
-//        );
-//    }
-//
-//    function register_settings() {
-//        register_setting('taka-settings', 'taka_address' );
-//    }
-//
-//    function show_settings() {
-//
-//    }
+
+    function taka_admin_menu() {
+        add_menu_page (
+            'Site Settings',
+            'Site Settings',
+            'manage_options',
+            'taka_settings',
+            array($this, 'create_admin_page'),
+            '',
+            '2'
+        );
+    }
+
+    function register_settings() {
+        register_setting(
+            'taka_options',
+            'taka_address',
+            array( $this, 'sanitize' ) // Sanitize
+        );
+
+        register_setting(
+            'taka_options',
+            'taka_phone',
+            array( $this, 'sanitize' ) // Sanitize
+        );
+
+        register_setting(
+            'taka_options',
+            'taka_facebook_url',
+            array( $this, 'sanitize' ) // Sanitize
+        );
+
+    }
+
+    public function sanitize( $input )
+    {
+        $new_input = array();
+        if( isset( $input['id_number'] ) )
+            $new_input['id_number'] = absint( $input['id_number'] );
+
+        if( isset( $input['title'] ) )
+            $new_input['title'] = sanitize_text_field( $input['title'] );
+
+        return $new_input;
+    }
+
+    function create_admin_page() {
+
+    }
 }
 //
 function taka() {
