@@ -19,7 +19,8 @@ get_header();
             <?php endwhile; ?>
             <?php endif; ?>
         </div>
+        <div id="gMap"></div>
     </section>
 </div>
-
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNmNq5vZuEfg2BC8vyr8DAqB8SrVS90KY"></script>
 <?php get_footer(); ?>
