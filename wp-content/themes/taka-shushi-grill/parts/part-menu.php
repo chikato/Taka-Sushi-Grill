@@ -10,14 +10,14 @@
         ?>
     </div>
     <div id="social" class="">
-        <span><a href="#"><i class="fa fa-facebook"></i></a></span>
+        <span><a target="_blank" href="<?php echo get_option("eto_settings")['eto_facebook']; ?>"><i class="fa fa-facebook"></i></a></span>
     </div>
 </div>
 
 <div id="mobile-nav-header" class="nav-header visible-xs-block visible-sm-block items-group align-row align-start vertical-top">
     <div class="items-group align-column">
         <div id="social">
-            <span><a href="#"><i class="fa fa-facebook"></i></a></span>
+            <span><a target="_blank" href="<?php echo get_option("eto_settings")['eto_facebook']; ?>"><i class="fa fa-facebook"></i></a></span>
         </div>
             <?php
             wp_nav_menu();
