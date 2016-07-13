@@ -3,7 +3,7 @@
         <h2>bevorstehende</h2>
         <h1>VERANSTALTUNGEN</h1>
     </div>
-    <div class="event-content tk-container">
+    <div class="event-content container">
         <div class="col-md-6 hidden-xs hidden-sm">
             <!--                    <img src="--><?php //echo get_bloginfo('template_url').'/img/content/home/events.jpg'; ?><!--">-->
             <div class="event-img" style="background: url('<?php echo get_bloginfo('template_url').'/img/content/home/events.jpg'; ?>')"></div>

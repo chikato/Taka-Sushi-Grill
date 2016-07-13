@@ -8,7 +8,7 @@
                 </div>
             </div>
         </div>
-        <div class="category tk-container">
+        <div class="category container">
             <div class="col-xs-6 col-sm-6 col-md-6 mn-food active">
                 <div class="table">
                     <div class="table-cell food">
@@ -39,7 +39,7 @@
             </div>
         </div>
     </div>
-    <div class="items tk-container">
+    <div class="items container">
         <div class="items-food clearfix">
             <?php
             for($i=0;$i<8;$i++) {
@@ -66,6 +66,6 @@
                 </div>
             <?php } ?>
         </div>
-        <div class="hidden items-drink col-md-offset-1"></div>
+        <div class="hidden items-drink"></div>
     </div>
 </div>

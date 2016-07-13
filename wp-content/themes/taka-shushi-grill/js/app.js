@@ -60,11 +60,9 @@
                 var option = {
                     zoom: 12,
                     scrollwheel: false,
-                    center: {
-                        lat: 51.33949630000001,
-                        lng: 6.465446699999999
-                    }
+                    center: getLocation.call($("#gMap")[0])
                 };
+
 
                 var map = new google.maps.Map($("#gMap")[0], option);
                 addMarker(option.center, map);
