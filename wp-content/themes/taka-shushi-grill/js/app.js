@@ -61,8 +61,8 @@
                     zoom: 12,
                     scrollwheel: false,
                     center: {
-                        lat: 0,
-                        lng: 0
+                        lat: 51.33949630000001,
+                        lng: 6.465446699999999
                     }
                 };
 

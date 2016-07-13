@@ -1,5 +1,24 @@
+.contact-page {
+  margin-top: 150px;
+
+  .contact-info {
+    color: $color_white;
+
+    h2 {
+      margin-top: -5px;
+      color: $color_main;
+    }
+
+    i {
+      color: $color_main;
+      margin-right: 20px;
+      font-size: 18px;
+    }
+  }
+}
+
 .contact-form-container {
-  margin: 30px;
+  margin: 30px 0;
 
   .wpcf7 {
     max-width: 520px;
@@ -22,5 +41,5 @@
 }
 
 #gMap {
-  height: 540px;
+  height: 350px;
 }
