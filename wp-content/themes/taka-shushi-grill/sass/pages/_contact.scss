@@ -43,3 +43,18 @@
 #gMap {
   height: 350px;
 }
+
+@media #{$mobile_and_tablet} {
+
+  .contact-page {
+    margin-top: 26px;
+
+    .contact-info {
+      margin-top: 30px;
+    }
+
+    .contact-form-container {
+      border-top: 1px solid $color_menu_bg;
+    }
+  }
+}

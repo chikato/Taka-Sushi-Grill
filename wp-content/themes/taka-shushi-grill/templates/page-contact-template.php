@@ -10,14 +10,14 @@ get_header();
 $options = get_option("eto_settings");
 ?>
 <div class="block">
-    <section class="section banner bg-img page" style="background: url('<?php echo get_bloginfo('template_url').'/img/common/header_img.jpg'; ?>')">
+    <section class="section bg-img page" style="background: url('<?php echo get_bloginfo('template_url').'/img/common/header_img.jpg'; ?>')">
         <div class="mask"></div>
     </section>
     <section class="contact-page">
         <div class="container">
             <div class="contact-map clearfix">
-                <div id="gMap" class="col-md-7"></div>
-                <div class="col-md-4 contact-info col-md-offset-1">
+                <div id="gMap" class="col-sm-10 col-sm-offset-1 col-md-7 col-md-offset-0"></div>
+                <div class="col-sm-11 col-sm-offset-1 col-md-4 contact-info col-md-offset-1">
                     <h2>Contact Info</h2>
                     <p><i class="fa fa-map-marker"></i><span><?php echo $options['eto_address'];?></span></p>
                     <p><i class="fa fa-phone"></i><span><?php echo $options['eto_phone'];?></span></p>

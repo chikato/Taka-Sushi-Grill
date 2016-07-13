@@ -40,14 +40,14 @@
   }
 }
 
-.banner.page {
+.section.page {
   position: fixed;
   z-index: -1;
   top: 0;
 }
 
 @media #{$mobile_and_tablet} {
-  .section {
+  .banner {
     .mask {
       height: 50vh;
     }
