@@ -56,7 +56,7 @@ get_header();
                 for($i=0;$i<8;$i++) {
                     ?>
                     <div class="item col-xs-12 col-sm-12 col-md-6">
-                        <div class="item-container clearfix">
+                        <a class="item-container clearfix" rel="prettyPhoto" alt="efefewf" title="YAKI-TORI<br>Description" href="<?php echo get_bloginfo('template_url').'/img/content/home/yaki.jpg'; ?>">
                             <div class="item-thumbnail">
                                 <img class="img" src="<?php echo get_bloginfo('template_url').'/img/content/home/yaki.jpg'; ?>">
                             </div>
@@ -73,7 +73,7 @@ get_header();
                                 </div>
                             </div>
                             <span class="hover-text">NEU</span>
-                        </div>
+                        </a>
                     </div>
                 <?php } ?>
             </div>

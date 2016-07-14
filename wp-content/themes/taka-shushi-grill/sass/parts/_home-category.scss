@@ -117,6 +117,9 @@
           min-height: 100px;
           border: 1px solid #dddbdb;
           position: relative;
+          display: block;
+          color: $color_base;
+          text-decoration: none;
           @include border-radius(4px);
           @include flex;
           @include transition(all 0.3s ease);
