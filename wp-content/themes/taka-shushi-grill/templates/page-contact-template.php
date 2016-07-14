@@ -8,7 +8,7 @@
  */
 get_header();
 $options = get_option("eto_settings");
-$google_map = get_field('google_map');
+$google_map = get_field('location');
 ?>
 <div class="block">
     <section class="section bg-img page" style="background: url('<?php echo get_bloginfo('template_url').'/img/common/header_img.jpg'; ?>')">
@@ -37,5 +37,5 @@ $google_map = get_field('google_map');
         </div>
     </section>
 </div>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATExYoowEjVke3f-99PHj4M07I5D8hy4M"></script>
 <?php get_footer(); ?>
