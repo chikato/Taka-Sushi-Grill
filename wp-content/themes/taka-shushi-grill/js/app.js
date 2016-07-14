@@ -7,6 +7,7 @@
         init: function () {
             this._initFP();
             this._initGMap();
+            this._initMenuPage();
         },
         
         _initFP: function () {
@@ -72,8 +73,14 @@
             if(typeof google != 'undefined'){
                 google.maps.event.addDomListener(window, 'load', initMap);
             }
+        },
 
-            initMap();
+        _initMenuPage: function () {
+            var $menu = $(".mn-food, .mn-drink");
+            $menu.click(function () {
+                $menu.removeClass("active");
+                $(this).addClass("active");
+            });
         }
     };
 
