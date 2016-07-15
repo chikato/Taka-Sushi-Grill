@@ -9,13 +9,16 @@
 get_header();
 ?>
 <div class="block">
-    <section class="section bg-img" style="background: url('<?php echo get_bloginfo('template_url').'/img/common/header_img.jpg'; ?>')">
+    <section class="section bg-img page" style="background: url('<?php echo get_bloginfo('template_url').'/img/common/header_img.jpg'; ?>')">
         <div class="mask"></div>
     </section>
-    <section class="news-page">
-        <div class="container">
+    <section class="tk-page">
+        <div class="container about-page items-group">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                <?php the_content(); ?>
+                <div class="about-img"><img class="img-responsive" src="<?php the_post_thumbnail_url("full") ?>"></div
+                ><div class="about-content">
+                    <?php the_content(); ?>
+                </div>
             <?php endwhile; ?>
             <?php endif; ?>
         </div>

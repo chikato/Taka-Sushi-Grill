@@ -14,7 +14,7 @@ $google_map = get_field('location');
     <section class="section bg-img page" style="background: url('<?php echo get_bloginfo('template_url').'/img/common/header_img.jpg'; ?>')">
         <div class="mask"></div>
     </section>
-    <section class="contact-page">
+    <section class="tk-page">
         <div class="container">
             <div class="contact-map clearfix">
                 <div class="map-container col-xs-12 col-md-5"">

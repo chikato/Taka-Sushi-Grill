@@ -1,0 +1,22 @@
+.about-page {
+  padding: 30px 15px;
+
+  >div {
+    padding: 0 15px;
+  }
+
+  .about-img {
+    max-width: 50%;
+  }
+}
+
+@media #{$mobile} {
+  .about-page.items-group {
+    display: block;
+
+    .about-img {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+}

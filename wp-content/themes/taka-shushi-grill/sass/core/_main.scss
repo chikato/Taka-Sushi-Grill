@@ -128,3 +128,13 @@ h1 {
     @include transform(scale(1.5));
   }
 }
+
+.tk-page {
+  background: $color_overlay;
+  color: $color_white;
+  border-top: 4px solid $color_main;
+
+  @media #{$desktop} {
+    margin-top: 150px;
+  }
+}
