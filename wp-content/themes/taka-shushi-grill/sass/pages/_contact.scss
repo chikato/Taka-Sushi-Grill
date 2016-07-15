@@ -3,6 +3,9 @@
 
   .contact-info {
     color: $color_white;
+    background: rgba(0,0,0,0.6);
+    padding-top: 15px;
+    padding-bottom: 15px;
 
     h2 {
       margin-top: -5px;
@@ -23,6 +26,8 @@
   .wpcf7 {
     max-width: 520px;
     margin: 0 auto;
+    background: rgba(0,0,0,0.6);
+    padding: 15px 30px;
 
     h2 {
       text-align: center;
