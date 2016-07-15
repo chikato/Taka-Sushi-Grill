@@ -17,7 +17,7 @@ $google_map = get_field('location');
     <section class="contact-page">
         <div class="container">
             <div class="contact-map clearfix">
-                <div id="gMap" class="col-sm-10 col-sm-offset-1 col-md-7 col-md-offset-0"
+                <div id="gMap" class="col-sm-11 col-sm-offset-1 col-md-7 col-md-offset-0"
                      data-lat="<?php echo $google_map['lat']; ?>"
                      data-lng="<?php echo $google_map['lng']; ?>">
                 </div>
