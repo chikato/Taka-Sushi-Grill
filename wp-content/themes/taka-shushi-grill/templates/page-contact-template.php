@@ -17,23 +17,20 @@ $google_map = get_field('location');
     <section class="contact-page">
         <div class="container">
             <div class="contact-map clearfix">
-                <div id="gMap" class="col-sm-11 col-sm-offset-1 col-md-7 col-md-offset-0"
-                     data-lat="<?php echo $google_map['lat']; ?>"
-                     data-lng="<?php echo $google_map['lng']; ?>">
+                <div class="map-container col-xs-12 col-md-5"">
+                    <div id="gMap"
+                         data-lat="<?php echo $google_map['lat'] ? $google_map['lat'] : 0; ?>"
+                         data-lng="<?php echo $google_map['lng'] ? $google_map['lng'] : 0; ?>">
+                    </div>
                 </div>
-                <div class="col-sm-11 col-sm-offset-1 col-md-4 contact-info col-md-offset-1">
-                    <h2>Contact Info</h2>
-                    <p><i class="fa fa-map-marker"></i><span><?php echo $options['eto_address'];?></span></p>
-                    <p><i class="fa fa-phone"></i><span><?php echo $options['eto_phone'];?></span></p>
-                    <p><i class="fa fa-envelope-o"></i><span><?php echo $options['eto_email'];?></span></p>
+                <div class="col-xs-12 col-md-4 contact-info">
+                    <?php echo get_field("contact_info"); ?>
                 </div>
+            <div class="col-xs-12 col-md-3 contact-form-container">
+                <?php echo get_field("contact_form")?>
             </div>
-            <div class="contact-form-container">
-                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                    <?php the_content(); ?>
-                <?php endwhile; ?>
-                <?php endif; ?>
             </div>
+
         </div>
     </section>
 </div>

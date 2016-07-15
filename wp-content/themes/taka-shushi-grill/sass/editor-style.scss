@@ -1,3 +1,6 @@
+@import "../css/font-awesome.min.css";
 @import "core/_fonts.scss";
 @import "core/_var.scss";
-@import "core/_mixin.scss";
+@import "core/_mixin";
+
+@import "_editor.scss";

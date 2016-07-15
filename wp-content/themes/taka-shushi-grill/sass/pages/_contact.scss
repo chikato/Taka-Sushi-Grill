@@ -1,36 +1,27 @@
 .contact-page {
   margin-top: 150px;
+  background: $color_overlay;
 
   .contact-info {
     color: $color_white;
-    background: rgba(0,0,0,0.6);
-    padding-top: 15px;
-    padding-bottom: 15px;
+  }
 
+  .contact-map {
+    padding: 30px 0;
+  }
+
+  @media #{$desktop} {
     h2 {
-      margin-top: -5px;
-      color: $color_main;
-    }
-
-    i {
-      color: $color_main;
-      margin-right: 20px;
-      font-size: 18px;
+      margin-top: 0;
     }
   }
 }
 
 .contact-form-container {
-  margin: 30px 0;
 
   .wpcf7 {
-    max-width: 520px;
-    margin: 0 auto;
-    background: rgba(0,0,0,0.6);
-    padding: 15px 30px;
 
     h2 {
-      text-align: center;
       color: $color_main;
       margin-bottom: 20px;
     }
@@ -45,21 +36,8 @@
   }
 }
 
+
 #gMap {
   height: 350px;
-}
-
-@media #{$mobile_and_tablet} {
-
-  .contact-page {
-    margin-top: 26px;
-
-    .contact-info {
-      margin-top: 30px;
-    }
-
-    .contact-form-container {
-      border-top: 1px solid $color_menu_bg;
-    }
-  }
+  background-color: none !important;
 }
