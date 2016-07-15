@@ -80,6 +80,7 @@
             $menu.click(function () {
                 $menu.removeClass("active");
                 $(this).addClass("active");
+                $(".item-list").toggle();
             });
         }
     };

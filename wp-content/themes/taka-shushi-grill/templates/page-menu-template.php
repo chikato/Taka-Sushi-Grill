@@ -64,7 +64,7 @@ $drink = getMenu("drink");
             </div>
         </div>
         <div class="items container">
-            <div class="items-food clearfix">
+            <div class="item-list items-food clearfix">
                 <?php
                 if( $food->have_posts() ) {
                     while ($food->have_posts()) : $food->the_post(); ?>
@@ -95,7 +95,7 @@ $drink = getMenu("drink");
                 }
                 ?>
             </div>
-            <div class="hidden items-drink clearfix">
+            <div class="item-list hidden items-drink clearfix">
                 <?php
                 if( $drink->have_posts() ) {
                     while ($drink->have_posts()) : $drink->the_post(); ?>

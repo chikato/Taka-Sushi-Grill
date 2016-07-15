@@ -40,7 +40,7 @@
         </div>
     </div>
     <div class="items container">
-        <div class="items-food clearfix">
+        <div class="item-list items-food clearfix">
             <?php
             for($i=0;$i<8;$i++) {
                 ?>
@@ -66,6 +66,6 @@
                 </div>
             <?php } ?>
         </div>
-        <div class="hidden items-drink"></div>
+        <div class="item-list hidden items-drink"></div>
     </div>
 </div>
