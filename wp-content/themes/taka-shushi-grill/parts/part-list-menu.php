@@ -23,7 +23,7 @@ $num_row = $options['eto_num-row-menu'];
         <?php
         $num_food_item = 0;
         if( $food->have_posts() ) {
-            while ($food->have_posts() && $num_food_item<$num_row*2) : $food->the_post(); $num_food_item++; ?>
+            while ($food->have_posts() && (!is_front_page()  || $num_food_item<$num_row*2)) : $food->the_post(); $num_food_item++; ?>
                 <div class="item col-xs-12 col-sm-12 col-md-6">
                     <a class="item-container clearfix" rel="prettyPhoto"
                        href="<?php the_post_thumbnail_url("full"); ?>">
@@ -56,10 +56,10 @@ $num_row = $options['eto_num-row-menu'];
         $num_drink_item = 0;
 
         if( $drink->have_posts() ) {
-            while ($drink->have_posts() && $num_drink_item<$num_row*2) : $drink->the_post(); $num_drink_item++; ?>
+            while ($drink->have_posts() && (!is_front_page() || $num_drink_item<$num_row*2)) : $drink->the_post(); $num_drink_item++; ?>
                 <div class="item col-xs-12 col-sm-12 col-md-6 ">
                     <a class="item-container clearfix" rel="prettyPhoto"
-                       href="<?php the_post_thumbnail_url("full") ?>">
+                       href="<?php  the_post_thumbnail_url("full") ?>">
                         <div class="item-thumbnail">
                             <img class="img"
                                  src="<?php the_post_thumbnail_url() ?>">
