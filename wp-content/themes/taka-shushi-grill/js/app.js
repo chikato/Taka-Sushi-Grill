@@ -18,6 +18,12 @@
                     $("header").removeClass("header-stick");
                 }
             });
+            var $menuItems = $(".menu li a");
+
+            $.each($menuItems,function () {
+                $(this).attr('data',this.innerHTML);
+            });
+
             // $('#wrapper').fullpage({
             //     verticalCentered: false,
             //     css3: true,
