@@ -17,25 +17,25 @@
             <div class="event-cover">
                 <div class="ed-col">
                     <div class="date-content">
-                        <p class="num day">06</p>
+                        <p class="num days">06</p>
                         <p class="des">Tage</p>
                     </div>
                 </div>
                 <div class="ed-col">
                     <div class="date-content">
-                        <p class="num hour">16</p>
+                        <p class="num hours">16</p>
                         <p class="des">Studen</p>
                     </div>
                 </div>
                 <div class="ed-col">
                     <div class="date-content">
-                        <p class="num minute">11</p>
+                        <p class="num minutes">11</p>
                         <p class="des">Minuten</p>
                     </div>
                 </div>
                 <div class="ed-col">
                     <div class="date-content">
-                        <p class="num second">58</p>
+                        <p class="num seconds">58</p>
                         <p class="des">Sekunden</p>
                     </div>
                 </div>

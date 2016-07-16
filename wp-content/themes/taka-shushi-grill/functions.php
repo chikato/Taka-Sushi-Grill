@@ -72,6 +72,7 @@ function tsg_scripts() {
     $scripts = array(
         '/js/lib/scrolloverflow.min.js',
         '/js/lib/jquery.fullPage.min.js',
+        '/js/lib/jquery.countdown.js',
         '/js/app.js'
     );
     foreach ($scripts as $key => $url){

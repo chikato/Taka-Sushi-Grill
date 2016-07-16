@@ -8,6 +8,7 @@
             this._initFP();
             this._initGMap();
             this._initMenuPage();
+            this._initEventCountDown();
         },
         
         _initFP: function () {
@@ -96,7 +97,27 @@
                     opacity : 0
                 },300,"linear");
             });
-        }
+        },
+
+        _initEventCountDown : function () {
+            $('.event-cover').countdown("2016/07/31/12:00:00", function(event)
+            {
+                var $this = $(this);
+                switch(event.type) {
+                    case "seconds":
+                    case "minutes":
+                    case "hours":
+                    case "days":
+                    case "weeks":
+                    case "daysLeft":
+                        $this.find('p.'+event.type).html(event.value);
+                        break;
+                    case "finished":
+                        $this.fadeTo('slow', .5);
+                        break;
+                }
+            });
+    }
     };
 
 })(jQuery);
