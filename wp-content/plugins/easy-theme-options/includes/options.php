@@ -15,10 +15,10 @@ $eto_custom_tabs = array(
 			'label'=> __('General', 'eto'),
 			'id'	=> $prefix.'general'
 		),
-		array(
-			'label'=> __('Advanced', 'eto'),
-			'id'	=> $prefix.'advanced'
-		),
+//		array(
+//			'label'=> __('Advanced', 'eto'),
+//			'id'	=> $prefix.'advanced'
+//		),
 	    array(
 			'label'=> __('Menu-Option', 'eto'),
 			'id'	=> $prefix.'menu-option'
