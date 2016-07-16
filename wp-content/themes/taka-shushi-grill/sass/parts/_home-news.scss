@@ -40,7 +40,7 @@
     .event-date .event-cover {
       height: $eventHeight;
       background: $color_main;
-      padding: 8px;
+      padding: 15px;
       flex-flow: row wrap;
       @include flex;
 
@@ -55,6 +55,7 @@
         background: #a40f1b;
         height: 100%;
         color: $color_white;
+        padding: 10px 0;
         text-align: center;
 
         >p {
@@ -63,6 +64,7 @@
 
         .num {
           font-size: 40px;
+          font-family: 'Roboto', sans-serif;
         }
 
         .des {
