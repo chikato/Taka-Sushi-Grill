@@ -10,7 +10,7 @@
                         <p class="text">shushi & grill</p>
                         <p class="line"></p>
                     </div>
-                    <div class="btn btn-main">Zur Speisekarte</div>
+                    <a class="btn btn-main" href="<?php echo home_url( '/speisekarte/' )?>">Zur Speisekarte</a>
                 </div>
             </div>
         </div>
