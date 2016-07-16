@@ -1,24 +1,29 @@
 <?php
 
-function getMenu($type) {
+function getMenu($type,$order_by="date") {
+
     $args=array(
         'post_type' => $type,
         'post_status' => 'publish',
         'posts_per_page' => -1,
-        'caller_get_posts'=> 1);
-
+        'caller_get_posts'=> 1,
+        'orderby'=>$order_by,
+        'order'=>'DESC');
     return new WP_Query($args);
 }
+$options = get_option("eto_settings");
+$orderBy = $options["eto_sort-menu"];
+$food = getMenu("food",$orderBy);
+$drink = getMenu("drink",$orderBy);
 
-$food = getMenu("food");
-$drink = getMenu("drink");
-
+$num_row = $options['eto_num-row-menu'];
 ?>
 <div class="items container">
     <div class="item-list items-food clearfix">
         <?php
+        $num_food_item = 0;
         if( $food->have_posts() ) {
-            while ($food->have_posts()) : $food->the_post(); ?>
+            while ($food->have_posts() && $num_food_item<$num_row*2) : $food->the_post(); $num_food_item++; ?>
                 <div class="item col-xs-12 col-sm-12 col-md-6">
                     <a class="item-container clearfix" rel="prettyPhoto"
                        href="<?php the_post_thumbnail_url("full"); ?>">
@@ -48,9 +53,11 @@ $drink = getMenu("drink");
     </div>
     <div class="item-list hidden items-drink clearfix">
         <?php
+        $num_drink_item = 0;
+
         if( $drink->have_posts() ) {
-            while ($drink->have_posts()) : $drink->the_post(); ?>
-                <div class="item col-xs-12 col-sm-12 col-md-6">
+            while ($drink->have_posts() && $num_drink_item<$num_row*2) : $drink->the_post(); $num_drink_item++; ?>
+                <div class="item col-xs-12 col-sm-12 col-md-6 ">
                     <a class="item-container clearfix" rel="prettyPhoto"
                        href="<?php the_post_thumbnail_url("full") ?>">
                         <div class="item-thumbnail">
