@@ -18,6 +18,10 @@ $eto_custom_tabs = array(
 		array(
 			'label'=> __('Advanced', 'eto'),
 			'id'	=> $prefix.'advanced'
+		),
+	    array(
+			'label'=> __('Menu-Option', 'eto'),
+			'id'	=> $prefix.'menu-option'
 		)
 	);
 
@@ -202,9 +206,65 @@ $eto_custom_meta_fields = array(
 	
 	array(
 		'type'	=> 'tab_end'
-	)
+	),
 	/* -- /TAB 2 -- */
 
+	/* -- TAB 3 -- */
+	array(
+		'id'	=> $prefix.'menu-option', // Use data in $eto_custom_tabs
+		'type'	=> 'tab_start'
+	),
+
+	array(
+		'label'	=> 'Display Row Number',
+		'desc'	=> 'The list menu in Home page will display with a specify row',
+		'id'	=> $prefix.'num-row-menu',
+		'type'	=> 'select',
+		'options' => array (
+			'one' => array (
+				'label' => '2',
+				'value'	=> '2'
+			),
+			'two' => array (
+				'label' => '3',
+				'value'	=> '3'
+			),
+			'three' => array (
+				'label' => '4',
+				'value'	=> '4'
+			),
+			'five' => array (
+				'label' => '5',
+				'value'	=> '5'
+			),
+			'six' => array (
+				'label' => '6',
+				'value'	=> '6'
+			)
+		)
+	),
+
+	array(
+		'label'	=> 'Desc Order By',
+		'desc'	=> 'Sort Items in the menu',
+		'id'	=> $prefix.'sort-menu',
+		'type'	=> 'select',
+		'options' => array (
+			'date' => array (
+				'label' => 'Date',
+				'value'	=> 'date'
+			),
+			'price' => array (
+				'label' => 'Price',
+				'value'	=> 'price'
+			)
+
+		)
+	),
+	array(
+		'type'	=> 'tab_end'
+	),
+	/* -- /TAB 3 -- */
 );
 
 ?>
