@@ -98,12 +98,19 @@ function add_theme_option() {
 }
 add_action( 'wp_head', 'add_theme_option' );
 
-function get_background() {
-   /* $bgUrl = the_post_thumbnail_url("full");
-    echo $bgUrl;*/
-    $bgUrl = get_background_image();
+function get_background($id=null) {
 
-    !$bgUrl ? $bgUrl = get_background_image() : get_bloginfo('template_url').'/img/common/header_img.jpg';;
+    // check to see if the theme supports Featured Images, and one is set
+    if ($id && current_theme_supports( 'post-thumbnails' ) && has_post_thumbnail( $id)) {
 
-    return $bgUrl;
+        // specify desired image size in place of 'full'
+        $page_bg_image = wp_get_attachment_image_src( get_post_thumbnail_id($id), 'full' );
+        $page_bg_image_url = $page_bg_image[0]; // this returns just the URL of the image
+
+    } else {
+        // the fallback – our current active theme's default bg image
+        $page_bg_image_url = get_background_image();
+    }
+
+    return $page_bg_image_url ? $page_bg_image_url : get_bloginfo('template_url').'/img/common/header_img.jpg';
 }

@@ -11,7 +11,7 @@ $options = get_option("eto_settings");
 $google_map = get_field('location');
 ?>
 <div class="block">
-    <section class="section bg-img page" style="background: url('<?php echo get_bloginfo('template_url').'/img/common/header_img.jpg'; ?>')">
+    <section class="section bg-img page" style="background: url('<?php echo get_background(); ?>')">
         <div class="mask"></div>
     </section>
     <section class="tk-page">

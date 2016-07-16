@@ -10,7 +10,7 @@ get_header();
 ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <div class="block">
-    <section class="section bg-img page" style="background: url('<?php echo get_bloginfo('template_url').'/img/common/header_img.jpg'; ?>')">
+    <section class="section bg-img page" style="background: url('<?php echo get_background(get_the_ID()); ?>')">
         <div class="mask"></div>
     </section>
     <section class="tk-page">

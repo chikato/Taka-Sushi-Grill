@@ -9,7 +9,7 @@
 get_header();
 ?>
 <div class="block">
-    <section class="section bg-img" style="background: url('<?php echo get_bloginfo('template_url').'/img/common/header_img.jpg'; ?>')">
+    <section class="section bg-img" style="background: url('<?php echo get_background(); ?>')">
         <div class="mask"></div>
     </section>
     <section class="news-page">
