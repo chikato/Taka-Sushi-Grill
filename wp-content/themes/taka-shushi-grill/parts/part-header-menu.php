@@ -1,5 +1,5 @@
 <div class="bg-img" style="background: url('<?php echo get_bloginfo('template_url').'/img/content/home/menu_bg.jpg'; ?>')">
-    <div class="table">
+    <div class="mask table">
         <div class="table-cell">
             <div class="container">
                 <h2 class="mn-sub-title">ein Blick in die</h2>
