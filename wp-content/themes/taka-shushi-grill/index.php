@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="block">
-    <section class="section banner bg-img" style="background: url('<?php echo get_bloginfo('template_url').'/img/common/header_img.jpg'; ?>')">
+    <section class="section banner bg-img <?php echo get_background(); ?>" style="background: url('<?php echo get_bloginfo('template_url').'/img/common/header_img.jpg'; ?>')">
         <div class="mask fp-table">
             <div class="fp-tableCell">
                 <div class="content container">

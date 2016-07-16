@@ -97,3 +97,13 @@ function add_theme_option() {
     $taka_options = get_option("eto_settings");
 }
 add_action( 'wp_head', 'add_theme_option' );
+
+function get_background() {
+   /* $bgUrl = the_post_thumbnail_url("full");
+    echo $bgUrl;*/
+    $bgUrl = get_background_image();
+
+    !$bgUrl ? $bgUrl = get_background_image() : get_bloginfo('template_url').'/img/common/header_img.jpg';;
+
+    return $bgUrl;
+}
