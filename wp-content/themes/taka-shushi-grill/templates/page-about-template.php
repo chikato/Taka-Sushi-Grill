@@ -15,7 +15,7 @@ get_header();
     </section>
     <section class="tk-page">
         <div class="container about-page items-group">
-            <div class="about-img"><img class="img-responsive" src="<?php echo get_field("post_image")["url"]; ?>"></div
+            <div class="about-img"><img class="img-responsive" src="<?php echo get_field("post_image"); ?>"></div
             ><div class="about-content">
                 <?php the_content(); ?>
             </div>
