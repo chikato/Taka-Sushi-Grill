@@ -81,7 +81,7 @@ function tsg_scripts() {
 
     $styles = array(
         '/css/bootstrap.min.css',
-//        '/css/jquery.fullPage.css',
+        '/css/jquery.fullPage.css',
         '/css/font-awesome.min.css'
     );
     foreach ($styles as $key => $url){
