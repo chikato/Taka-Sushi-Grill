@@ -52,8 +52,8 @@ function tsg_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name'          => esc_html__( 'Contact SideBar', 'tsg' ),
-        'id'            => 'contact-sidebar',
+        'name'          => esc_html__( 'Newsletter SideBar', 'tsg' ),
+        'id'            => 'newsletter-sidebar',
         'description'   => '',
         'before_widget' => '<div id="%1$s" class="widget contact-btn %2$s">',
         'after_widget'  => '</div>'

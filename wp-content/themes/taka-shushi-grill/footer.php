@@ -3,12 +3,14 @@
 ?>
 <footer id="footer" class="footer">
     <div class="newsletter table tk-container">
-            <div class="table-cell">
-                <label>registrieren sie sich für den newsletter</label>
-                <input type="text" value="" class="form-control">
-                <button class="btn btn-black">REGISTRIEREN</button>
-            </div>
+        <div class="table-cell">
+<!--            <label>registrieren sie sich für den newsletter</label>-->
+<!--            <input type="text" value="" class="form-control">-->
+<!--            <button class="btn btn-black">REGISTRIEREN</button>-->
+            <?php dynamic_sidebar("newsletter-sidebar"); ?>
         </div>
+
+    </div>
     <div class="footer-bottom">
         <div class="footer-mask">
             <div class="footer-logo">
