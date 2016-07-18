@@ -19,7 +19,7 @@ $drink = getMenu("drink",$orderBy);
 $num_row = $options['eto_num-row-menu'];
 ?>
 <div class="items container">
-    <div class="item-list items-food has-<?php echo $num_row?>-row clearfix">
+    <div class="item-list items-food has-<?php if (is_front_page()) echo $num_row?>-row clearfix">
         <?php
         $num_food_item = 0;
         if( $food->have_posts() ) {
@@ -51,7 +51,7 @@ $num_row = $options['eto_num-row-menu'];
         }
         ?>
     </div>
-    <div class="item-list hidden has-<?php echo $num_row?>-row items-drink clearfix">
+    <div class="item-list hidden has-<?php if (is_front_page()) echo $num_row?>-row items-drink clearfix">
         <?php
         $num_drink_item = 0;
 

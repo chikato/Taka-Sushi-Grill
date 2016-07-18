@@ -100,7 +100,10 @@
         },
 
         _initEventCountDown : function () {
-            $('.event-cover').countdown("2016/07/31/12:00:00", function(event)
+            var $event = $('.event-cover');
+            var $time = $event.data('time');
+
+            $event.countdown($time, function(event)
             {
                 var $this = $(this);
                 switch(event.type) {
@@ -113,7 +116,7 @@
                         $this.find('p.'+event.type).html(event.value);
                         break;
                     case "finished":
-                        $this.fadeTo('slow', .5);
+                        //$this.fadeTo('slow', .5);
                         break;
                 }
             });
