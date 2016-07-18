@@ -19,8 +19,8 @@ $google_map = get_field('location');
             <div class="contact-map clearfix">
                 <div class="map-container col-xs-12 col-md-5"">
                     <div id="gMap"
-                         data-lat="<?php echo $google_map['lat'] ? $google_map['lat'] : 0; ?>"
-                         data-lng="<?php echo $google_map['lng'] ? $google_map['lng'] : 0; ?>">
+                         data-lat="<?php echo $google_map['lat'] ? $google_map['lat'] : 51.339496; ?>"
+                         data-lng="<?php echo $google_map['lng'] ? $google_map['lng'] : 6.465447; ?>">
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-4 contact-info">
@@ -30,7 +30,6 @@ $google_map = get_field('location');
                 <?php echo get_field("contact_form")?>
             </div>
             </div>
-
         </div>
     </section>
 </div>
