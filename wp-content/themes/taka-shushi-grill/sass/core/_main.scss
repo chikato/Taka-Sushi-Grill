@@ -122,10 +122,12 @@ h1 {
 }
 
 .fa-facebook {
+  color: $color_white;
   @include transition(all .3s ease-in-out);
 
   &:hover {
     @include transform(scale(1.5));
+    color: $color_main;
   }
 }
 
