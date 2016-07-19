@@ -35,7 +35,7 @@ $custom_query = new WP_Query( $custom_args );
             <?php if ( $custom_query->have_posts() ) : ?>
                 <?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
                     <div class="post">
-                        <a href="" class="items-group vertical-center">
+                        <a href="<?php echo get_permalink(); ?>" class="items-group vertical-center">
                             <div class="bg-img post-img" style="background: url('<?php echo get_field("post_image"); ?>')">
                                 <div class="filter"></div>
                                 <time datetime="<?php echo get_the_date("Y/m/d"); ?>"><?php echo get_the_date('m/d'); ?></time>
