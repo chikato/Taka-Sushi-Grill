@@ -59,7 +59,7 @@ $num_row = $options['eto_num-row-menu'];
             while ($drink->have_posts() && (!is_front_page() || $num_drink_item<$num_row*2)) : $drink->the_post(); $num_drink_item++; ?>
                 <div class="item col-xs-12 col-sm-12 col-md-6 ">
                     <a class="item-container clearfix" rel="prettyPhoto"
-                       href="<?php  /*the_post_thumbnail_url("full")*/ ?>">
+                       href="<?php  the_post_thumbnail_url("full") ?>">
                         <div class="item-thumbnail">
                             <img class="img"
                                  src="<?php the_post_thumbnail_url() ?>">
