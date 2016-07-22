@@ -173,3 +173,83 @@ function post_pagination($numpages = '', $pagerange = '', $paged='') {
     }
 
 }
+add_filter( 'manage_posts_columns', 'managing_my_posts_columns', 10, 2 );
+function managing_my_posts_columns( $columns, $post_type ) {
+    if ( $post_type == 'food' || $post_type == 'drink' )
+        $columns[ 'item_type' ] = 'Item Type';
+    return $columns;
+}
+add_action( 'manage_posts_custom_column', 'populating_my_posts_columns', 10, 2 );
+function populating_my_posts_columns( $column_name, $post_id ) {
+    switch( $column_name ) {
+        case 'item_type':
+            echo '<div id="item_type-' . $post_id . '">' . get_post_meta( $post_id, 'item_type', true ) . '</div>';
+            break;
+    }
+}
+
+add_action( 'bulk_edit_custom_box', 'add_to_bulk_quick_edit_custom_box', 10, 2 );
+add_action( 'quick_edit_custom_box', 'add_to_bulk_quick_edit_custom_box', 10, 2 );
+function add_to_bulk_quick_edit_custom_box( $column_name, $post_type ) {
+
+    if ($post_type == 'food' || $post_type == 'drink') {
+        switch( $column_name ) {
+            case 'item_type':
+                ?><fieldset class="inline-edit-col-right">
+                <div class="inline-edit-group">
+                    <label>
+                        <span class="title">Item type</span>
+                        <input type="text" name="item_type" value="" />
+                    </label>
+                </div>
+            </fieldset><?php
+                break;
+        }
+
+    }
+}
+
+add_action( 'admin_print_scripts-edit.php', 'enqueue_edit_scripts' );
+function enqueue_edit_scripts() {
+    wp_enqueue_script( 'rachel-carden-admin-edit', get_bloginfo( 'stylesheet_directory' ) . '/quick_edit.js', array( 'jquery', 'inline-edit-post' ), '', true );
+}
+
+add_action( 'save_post','save_post', 10, 2 );
+function save_post( $post_id, $post ) {
+
+    // don't save for autosave
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
+        return $post_id;
+
+    // dont save for revisions
+    if ( isset( $post->post_type ) && $post->post_type == 'revision' )
+        return $post_id;
+
+    if( ($post->post_type == 'food') || ($post->post_type == 'drink') ) {
+
+
+            // release date
+            // Because this action is run in several places, checking for the array key keeps WordPress from editing
+            // data that wasn't in the form, i.e. if you had this post meta on your "Quick Edit" but didn't have it
+            // on the "Edit Post" screen.
+            if ( array_key_exists( 'item_type', $_POST ) )
+                update_post_meta( $post_id, 'item_type', $_POST[ 'item_type' ] );
+
+
+
+    }
+
+}
+
+add_action( 'wp_ajax_save_bulk_edit', 'save_bulk_edit' );
+function save_bulk_edit() {
+    // get our variables
+    $post_ids = ( isset( $_POST[ 'post_ids' ] ) && !empty( $_POST[ 'post_ids' ] ) ) ? $_POST[ 'post_ids' ] : array();
+    $item_type = ( isset( $_POST[ 'item_type' ] ) && !empty( $_POST[ 'item_type' ] ) ) ? $_POST[ 'item_type' ] : NULL;
+    // if everything is in order
+    if ( !empty( $post_ids ) && is_array( $post_ids ) && !empty( $item_type ) ) {
+        foreach( $post_ids as $post_id ) {
+            update_post_meta( $post_id, 'item_type', $item_type );
+        }
+    }
+}
