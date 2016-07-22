@@ -59,10 +59,10 @@ header {
     }
     z-index: 3;
     .nav-header {
-      margin-left: 160px;
+      padding-left: 160px;
 
       @media #{$desktop_small} {
-        margin-left: 0;
+        padding-left: 0;
       }
 
       > div {
@@ -271,11 +271,11 @@ header {
 
 @media #{$mobile} {
   .nav-trigger:checked ~ #main {
-    left: 77%;
+    left: 250px;
   }
 
   .nav-trigger:checked + label {
-    left: 77% + 5;
+    left: 250px + 12;
   }
 }
 
