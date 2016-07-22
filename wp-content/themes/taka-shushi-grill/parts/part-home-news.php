@@ -27,19 +27,19 @@ if ($event->have_posts()) {
             <h1>VERANSTALTUNGEN</h1>
         </div>
         <div class="event-content container">
-            <div class="col-md-6 hidden-xs hidden-sm">
+            <div class="col-md-5 col-lg-6 hidden-xs hidden-sm">
                 <!--                    <img src="-->
                 <?php //echo get_bloginfo('template_url').'/img/content/home/events.jpg'; ?><!--">-->
                 <div class="event-img"
                      style="background: url('<?php echo get_field("event_thumbnail"); ?>')"></div>
             </div>
-            <div class="col-xs-12 col-sm-8 col-md-4">
+            <div class="col-xs-12 col-sm-8 col-md-4 col-lg-4">
                 <h4 class="h4"><?php the_title(); ?></h4>
                 <p><?php the_content(); ?></p>
                 <!--            <p class="event-time">am 01.09.2016 um 12:30 Uhr</p>-->
                 <p class="event-time"> am <?php echo $date_event ?> um <?php echo $time_event ?> Uhr</p>
             </div>
-            <div class="col-xs-12 col-sm-4 col-md-2 event-date clearfix">
+            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2 event-date clearfix">
                 <div class="event-cover" data-time="<?php echo $time_full ?>">
                     <div class="ed-col">
                         <div class="date-content">
@@ -50,7 +50,7 @@ if ($event->have_posts()) {
                     <div class="ed-col">
                         <div class="date-content">
                             <p class="num hours"></p>
-                            <p class="des">Stude</p>
+                            <p class="des">Stunden</p>
                         </div>
                     </div>
                     <div class="ed-col">

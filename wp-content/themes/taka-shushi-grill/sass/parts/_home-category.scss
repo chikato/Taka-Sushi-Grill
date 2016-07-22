@@ -63,6 +63,10 @@
 
     .food, .drink {
       padding: 5px 10px;
+      
+      @media #{$mobile} {
+        padding: 5px 10px 15px 10px;
+      }
 
       >div {
         display: inline-block;
@@ -179,6 +183,7 @@
 
             img {
               height: 100%;
+              min-width: 100px;
               border-radius: 4px;
             }
           }
@@ -230,7 +235,29 @@
 @media #{$mobile_and_tablet} {
   .block-menu {
     .bg-img {
-      max-height: 50vh;
+      max-height: 280px;
     }
   }
 }
+
+/*
+@media only screen and (max-width: 420px) {
+  .block-menu .items>div .item .item-container {
+    height: auto;
+  }
+
+  .block-menu .items>div .item .item-container .item-thumbnail {
+    height: auto;
+    width: 100%;
+  }
+
+  .block-menu .items>div .item .item-container .item-thumbnail img {
+    height: auto;
+  }
+
+  .block-menu .items>div .item .item-container .item-info {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+}*/

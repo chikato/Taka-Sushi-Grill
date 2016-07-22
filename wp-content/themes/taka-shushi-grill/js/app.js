@@ -40,6 +40,10 @@
             //         disableMouse: true
             //     }
             // });
+
+            $(".fa-bars").click(function(){
+                $("#main").css("left") == "0px" ? $("body").css({overflow: "hidden"}) :  $("body").css({overflow: "auto"});
+            });
         },
 
         _initGMap: function () {

@@ -23,7 +23,7 @@ get_header();
                     <h1 class="title">TAKA</h1>
                     <div class="sub-title">
                         <p class="line"></p>
-                        <p class="text">shushi & grill</p>
+                        <p class="text">sushi & grill</p>
                         <p class="line"></p>
                     </div>
                     <a class="btn btn-main" href="<?php echo get_permalink( get_page_by_path( 'speisekarte' ) ); ?>">Zur Speisekarte</a>

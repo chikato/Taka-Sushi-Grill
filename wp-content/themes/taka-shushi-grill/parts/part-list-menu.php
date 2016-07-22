@@ -43,7 +43,15 @@ $num_row = $options['eto_num-row-menu'];
                                 <div class="price"><?php echo get_field("item_price"); ?></div>
                             </div>
                         </div>
-                        <span class="hover-text">NEU</span>
+                        <?php
+                        $field = get_field_object('item_type');
+                        $value = get_field('item_type');
+                        $label = $field['choices'][ $value ];
+
+                        if ($type != "blank") {
+                            ?>
+                            <span class="hover-text"><?php echo $label ?></span>
+                        <?php } ?>
                     </a>
                 </div>
                 <?php
@@ -76,7 +84,15 @@ $num_row = $options['eto_num-row-menu'];
                                 <div class="price"><?php echo get_field("item_price"); ?></div>
                             </div>
                         </div>
-                        <span class="hover-text">NEU</span>
+                        <?php
+                        $field = get_field_object('item_type');
+                        $value = get_field('item_type');
+                        $label = $field['choices'][ $value ];
+
+                        if ($type != "blank") {
+                            ?>
+                            <span class="hover-text"><?php echo $label ?></span>
+                        <?php } ?>
                     </a>
                 </div>
                 <?php
