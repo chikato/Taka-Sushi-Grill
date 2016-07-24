@@ -30,7 +30,7 @@ $custom_query = new WP_Query( $custom_args );
     <section class="section bg-img page" style="background: url('<?php echo get_background(); ?>')">
         <div class="mask"></div>
     </section>
-    <section class="tk-page">
+    <section class="tk-page" id="newsPage">
         <div class="container news-page items-group align-row flex-wrap">
             <?php if ( $custom_query->have_posts() ) : ?>
                 <?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>

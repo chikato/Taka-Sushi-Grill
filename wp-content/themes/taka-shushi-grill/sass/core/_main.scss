@@ -134,6 +134,7 @@ h1 {
   background: $color_overlay;
   color: $color_white;
   border-top: 4px solid $color_main;
+  @include transition(0.3s all ease);
 
   .container {
     padding: 30px 15px;
