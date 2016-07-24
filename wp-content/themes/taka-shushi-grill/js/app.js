@@ -1,6 +1,10 @@
 (function ($) {
     $(document).ready(function() {
         $site.init();
+
+        $(window).resize(function () {
+            $site._initNewsPage();
+        });
     });
 
     var $site = {
@@ -9,6 +13,7 @@
             this._initGMap();
             this._initMenuPage();
             this._initEventCountDown();
+            this._initNewsPage();
         },
         
         _initFP: function () {
@@ -124,7 +129,26 @@
                         break;
                 }
             });
-    }
+    },
+
+        _initNewsPage: function() {
+
+            setTimeout(function () {
+                var $page = $("#newsPage");
+
+                if($page.length > 0) {
+
+                    var marginTop = 0;
+                    try {
+                        marginTop = parseFloat($page.css('marginTop').replace("px"));
+                    } catch(e) {}
+
+                    $page.css({
+                        minHeight: $(window).height() - 480 - marginTop - $("#wpadminbar").height()
+                    });
+                }
+            }, 300);
+        }
     };
 
 })(jQuery);

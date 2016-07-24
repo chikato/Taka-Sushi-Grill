@@ -17,7 +17,7 @@ get_header();
         <section class="section bg-img page" style="background: url('<?php echo get_background(get_the_ID()); ?>')">
             <div class="mask"></div>
         </section>
-        <section class="tk-page">
+        <section id="newsPage" class="tk-page">
             <div class="container default-page items-group">
                 <div class="page-img"><img class="img-responsive" src="<?php echo get_field("post_image"); ?>"></div
                 ><div class="page-content">

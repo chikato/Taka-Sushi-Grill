@@ -172,9 +172,9 @@
 
           &:hover {
             border: 1px solid $color_main;
-            .hover-text {
+            /*.hover-text {
               opacity: 1;
-            }
+            }*/
           }
 
           .item-thumbnail {
@@ -206,7 +206,8 @@
             color: $color_white;
             padding: 0 5px;
             @include transition(all 0.4s ease);
-            opacity: 0;
+            @include border-radius(0 0 3px);
+            //opacity: 0;
           }
 
           .item-title, .price {
