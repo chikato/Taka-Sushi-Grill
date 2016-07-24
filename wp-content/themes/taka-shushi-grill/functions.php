@@ -179,11 +179,11 @@ function managing_my_posts_columns( $columns, $post_type ) {
         $columns[ 'item_type' ] = 'Item Type';
     return $columns;
 }
-add_action( 'manage_posts_custom_column', 'populating_my_posts_columns', 10, 2 );
+add_action( 'manage_posts_custom_column', 'populating_my_posts_columns', 10 , 2 );
 function populating_my_posts_columns( $column_name, $post_id ) {
     switch( $column_name ) {
         case 'item_type':
-            echo '<div id="item_type-' . $post_id . '">' . get_post_meta( $post_id, 'item_type', true ) . '</div>';
+            echo '<div id="item_type-' . $post_id . '" data-value="' . get_post_meta( $post_id, 'item_type', true )  .' " >' . get_post_meta( $post_id, 'item_type', true ) . '</div>';
             break;
     }
 }
@@ -198,8 +198,8 @@ function add_to_bulk_quick_edit_custom_box( $column_name, $post_type ) {
                 ?><fieldset class="inline-edit-col-right">
                 <div class="inline-edit-group">
                     <label>
-                        <span class="title">Item type</span>
-                        <input type="text" name="item_type" value="" />
+                        <span class="title">New item</span>
+                        <input type="checkbox" name="item_type" value="" />
                     </label>
                 </div>
             </fieldset><?php
@@ -211,7 +211,7 @@ function add_to_bulk_quick_edit_custom_box( $column_name, $post_type ) {
 
 add_action( 'admin_print_scripts-edit.php', 'enqueue_edit_scripts' );
 function enqueue_edit_scripts() {
-    wp_enqueue_script( 'rachel-carden-admin-edit', get_bloginfo( 'stylesheet_directory' ) . '/quick_edit.js', array( 'jquery', 'inline-edit-post' ), '', true );
+    wp_enqueue_script( 'admin-edit', get_bloginfo( 'stylesheet_directory' ) . '/quick_edit.js', array( 'jquery', 'inline-edit-post' ), '', true );
 }
 
 add_action( 'save_post','save_post', 10, 2 );

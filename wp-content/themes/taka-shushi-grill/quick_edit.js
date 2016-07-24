@@ -28,7 +28,9 @@
             var item_type = $( '#item_type-' + $post_id ).text();
 
             // populate the release date
-            $edit_row.find( 'input[name="item_type"]' ).val( item_type );
+            if (item_type=== 'NEU') {
+                $edit_row.find( 'input[name="item_type"]' ).prop('checked', true);
+            }
 
         }
 
@@ -44,8 +46,8 @@
             $post_ids.push( $( this ).attr( 'id' ).replace( /^(ttle)/i, '' ) );
         });
 
-        // get the release date
-        var $item_type = $bulk_row.find( 'input[name="item_type"]' ).val();
+        // get the item new
+        var $item_type = $bulk_row.find( 'input[name="item_type"]' ).is(':checked') ? 'NEU' : '';
 
         // save the data
         $.ajax({
