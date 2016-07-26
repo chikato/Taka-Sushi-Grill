@@ -37,7 +37,7 @@ if ($event->have_posts()) {
                 <h4 class="h4"><?php the_title(); ?></h4>
                 <p><?php the_content(); ?></p>
                 <!--            <p class="event-time">am 01.09.2016 um 12:30 Uhr</p>-->
-                <p class="event-time"> am <?php echo $date_event ?> um <?php echo $time_event ?> Uhr</p>
+<!--                <p class="event-time"> am --><?php //echo $date_event ?><!-- um --><?php //echo $time_event ?><!-- Uhr</p>-->
             </div>
             <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2 event-date clearfix">
                 <div class="event-cover" data-time="<?php echo $time_full ?>">

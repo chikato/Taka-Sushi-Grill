@@ -134,7 +134,7 @@
         _initNewsPage: function() {
 
             setTimeout(function () {
-                var $page = $("#newsPage");
+                var $page = $("#newsPage, .post-page");
 
                 if($page.length > 0) {
 

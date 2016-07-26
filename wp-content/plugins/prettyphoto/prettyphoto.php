@@ -30,7 +30,8 @@ function pp_print_footer_script() {
     jQuery("a[rel^='prettyPhoto']").prettyPhoto({
 	    deeplinking: false,
 	    social_tools:'',
-	    show_title: true
+	    show_title: true,
+	    allow_expand: false
 	    });
     });
 </script>

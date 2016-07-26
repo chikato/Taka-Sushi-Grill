@@ -253,3 +253,13 @@ function save_bulk_edit() {
         }
     }
 }
+
+function my_acf_google_map_api( $api ){
+
+    $api['key'] = 'AIzaSyATExYoowEjVke3f-99PHj4M07I5D8hy4M';
+
+    return $api;
+
+}
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
