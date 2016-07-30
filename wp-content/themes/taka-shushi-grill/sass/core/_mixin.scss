@@ -102,6 +102,14 @@
   display: flex;
 }
 
+@mixin flex-flow($val) {
+  -webkit-flex-flow: $val;
+  -o-flex-flow: $val;
+  -ms-flex-flow: $val;
+  -moz-flex-flow: $val;
+  flex-flow: $val;
+}
+
 @mixin appearance($value) {
   -webkit-appearance: $value;
   -moz-appearance: $value;

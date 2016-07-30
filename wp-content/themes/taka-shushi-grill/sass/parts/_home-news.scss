@@ -41,7 +41,7 @@
       height: $eventHeight;
       background: $color_main;
       padding: 15px;
-      flex-flow: row wrap;
+      @include flex-flow(row wrap);
       font-family: $font_raleway;
       @include flex;
 
