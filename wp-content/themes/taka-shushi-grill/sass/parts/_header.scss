@@ -260,7 +260,7 @@ header {
 }
 
 @media #{$tablet} {
-  .nav-trigger:checked ~ #main {
+  .nav-trigger:checked ~ #main, .nav-trigger:checked ~ #main .section.page  {
     left: 40%;
   }
 
@@ -270,7 +270,7 @@ header {
 }
 
 @media #{$mobile} {
-  .nav-trigger:checked ~ #main {
+  .nav-trigger:checked ~ #main, .nav-trigger:checked ~ #main .section.page {
     left: 250px;
   }
 
