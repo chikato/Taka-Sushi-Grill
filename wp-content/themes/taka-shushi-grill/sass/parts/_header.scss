@@ -250,8 +250,8 @@ header {
    // background-size: contain;
   }
 
-  .nav-trigger + label, #main {
-    transition: left 0.2s;
+  .nav-trigger + label, #main, .section.page {
+    @include transition(left 0.2s);
   }
 
 
