@@ -1,5 +1,5 @@
 (function ($) {
-    $(document).ready(function() {
+    $(document).ready(function () {
         $site.init();
 
         $(window).resize(function () {
@@ -15,19 +15,19 @@
             this._initEventCountDown();
             this._initNewsPage();
         },
-        
+
         _initFP: function () {
-            $(document).on("scroll",function(){
-                if($(document).scrollTop()>1){
+            $(document).on("scroll", function () {
+                if ($(document).scrollTop() > 1) {
                     $("header").addClass("header-stick");
-                } else{
+                } else {
                     $("header").removeClass("header-stick");
                 }
             });
             var $menuItems = $(".menu li a");
 
-            $.each($menuItems,function () {
-                $(this).attr('data',this.innerHTML);
+            $.each($menuItems, function () {
+                $(this).attr('data', this.innerHTML);
             });
 
             // $('#wrapper').fullpage({
@@ -46,8 +46,8 @@
             //     }
             // });
 
-            $(".fa-bars").click(function(){
-                $("#main").css("left") == "0px" ? $("body").css({overflow: "hidden"}) :  $("body").css({overflow: "auto"});
+            $(".fa-bars").click(function () {
+                $("#main").css("left") == "0px" ? $("body").css({overflow: "hidden"}) : $("body").css({overflow: "auto"});
             });
         },
 
@@ -69,7 +69,7 @@
             function getLocation() {
                 return {
                     lat: parseFloat($(this).attr("data-lat")),
-                    lng : parseFloat($(this).attr("data-lng"))
+                    lng: parseFloat($(this).attr("data-lng"))
                 };
             }
 
@@ -86,7 +86,7 @@
             }
 
             // check if exists
-            if(typeof google != 'undefined'){
+            if (typeof google != 'undefined') {
                 google.maps.event.addDomListener(window, 'load', initMap);
             }
         },
@@ -95,53 +95,55 @@
             var $menu = $(".mn-food, .mn-drink");
             var $item_list = $(".item-list");
             $menu.click(function () {
-                $menu.removeClass("active");
-                var $item_show = $(".item-list.hidden");
-                $(this).addClass("active");
-                $item_show.animate({
-                  opacity : 1
-                },400);
-                $item_list.toggleClass('hidden');
-                $(".item-list.hidden").animate({
-                    opacity : 0
-                },300,"linear");
+                if (!$(this).hasClass('active')) {
+                    $menu.removeClass("active");
+                    var $item_show = $(".item-list.hidden");
+                    $(this).addClass("active");
+                    $item_show.animate({
+                        opacity: 1
+                    }, 300);
+                    $item_list.toggleClass('hidden');
+                    $(".item-list.hidden").animate({
+                        opacity: 0
+                    }, 200, "linear");
+                }
             });
         },
 
-        _initEventCountDown : function () {
+        _initEventCountDown: function () {
             var $event = $('.event-cover');
             var $time = $event.data('time');
 
-            $event.countdown($time, function(event)
-            {
+            $event.countdown($time, function (event) {
                 var $this = $(this);
-                switch(event.type) {
+                switch (event.type) {
                     case "seconds":
                     case "minutes":
                     case "hours":
                     case "days":
                     case "weeks":
                     case "daysLeft":
-                        $this.find('p.'+event.type).html(event.value);
+                        $this.find('p.' + event.type).html(event.value);
                         break;
                     case "finished":
                         //$this.fadeTo('slow', .5);
                         break;
                 }
             });
-    },
+        },
 
-        _initNewsPage: function() {
+        _initNewsPage: function () {
 
             setTimeout(function () {
                 var $page = $("#newsPage, .post-page");
 
-                if($page.length > 0) {
+                if ($page.length > 0) {
 
                     var marginTop = 0;
                     try {
                         marginTop = parseFloat($page.css('marginTop').replace("px"));
-                    } catch(e) {}
+                    } catch (e) {
+                    }
 
                     $page.css({
                         minHeight: $(window).height() - 480 - marginTop - $("#wpadminbar").height()
