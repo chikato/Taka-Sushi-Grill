@@ -95,16 +95,19 @@
             var $menu = $(".mn-food, .mn-drink");
             var $item_list = $(".item-list");
             $menu.click(function () {
-                $menu.removeClass("active");
-                var $item_show = $(".item-list.hidden");
-                $(this).addClass("active");
-                $item_show.animate({
-                  opacity : 1
-                },400);
-                $item_list.toggleClass('hidden');
-                $(".item-list.hidden").animate({
-                    opacity : 0
-                },300,"linear");
+                if (!$(this).hasClass('active')){
+                    $menu.removeClass("active");
+                    var $item_show = $(".item-list.hidden");
+                    $(this).addClass("active");
+                    $item_show.animate({
+                        opacity : 1
+                    },300);
+                    $item_list.toggleClass('hidden');
+                    $(".item-list.hidden").animate({
+                        opacity : 0
+                    },200,"linear");
+                }
+
             });
         },
 
